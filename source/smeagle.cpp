@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <stdexcept>
+#include <string>
 
 #include "Function.h"
 #include "Symtab.h"

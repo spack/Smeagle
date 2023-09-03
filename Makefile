@@ -1,9 +1,8 @@
 .PHONY: all test standalone docs
 
 all:
-	cmake --log-level=VERBOSE -S all -B build
+	cmake --log-level=VERBOSE -S all -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 	cmake --build build
-
 
 test:
 	cmake -S test -B build/test

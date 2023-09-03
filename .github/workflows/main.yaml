@@ -36,6 +36,13 @@ jobs:
 
       - name: build and install library
         run: make 
+
+      - name: Run Include What You Use
+        uses: EmilGedda/include-what-you-use-action@fb65cd78dc3f5cb29785f784a017817d922fb858
+        with:
+          compilation-database-path: './build'
+          output-format: 'iwyu' # Or 'clang'
+          no-error: 'false'      
         
       - name: test
         run: make test
